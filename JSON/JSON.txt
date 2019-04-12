@@ -1,0 +1,32 @@
+{
+  "alumno": {
+    "datos_personales": {
+      "nombre": "Angelina",
+      "apellido": "Tresca",
+      "legajo": 69681
+    },
+    "datos_institucionales": {
+      "carreras": [{
+        "nombre":  "Ingeniería en Sistemas",
+        "materias_rendidas": [
+        {"codigo": "GDA", "nombre": "Gestion de datos", "fecha": "11/11/2015", "nota": 10},
+        {"codigo": "ACO", "nombre": "Arquitectura de computadoras", "fecha": "23/11/2015", "nota": 7},
+        {"codigo": "DSI", "nombre": "Diseño de sistemas", "fecha": "23/11/2017", "nota": 9}
+        ],
+        "materias_regulares": [
+          {"codigo": "RIN", "nombre": "Redes", "fecha_regularizacion": "22/12/2011"}
+        ]
+      },
+      {
+        "nombre":  "Ingeniería Industrial",
+        "materias_rendidas": [
+        {"codigo": "AMI", "nombre": "Análisis Matemático 1", "fecha": "21/11/2015", "nota": 5},
+        {"codigo": "AMII", "nombre": "Análisis Matemático 2", "fecha": "23/11/2016", "nota": 6},
+        {"codigo": "FISICA", "nombre": "Fisica", "fecha": "23/11/2017", "nota": 9}
+        ],
+        "materias_regulares": [
+		{"codigo": "FISICA2", "nombre": "Fisica 2", "fecha_regularizacion": "22/12/2013"}]
+      }]
+    }
+  }
+}

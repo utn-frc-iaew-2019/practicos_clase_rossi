@@ -1,0 +1,50 @@
+C:\Users\irina>keytool -keystore clientstore -genkey -alias client
+Picked up _JAVA_OPTIONS: -Xmx512M
+
+What is your first and last name?
+  [Unknown]:  8080
+What is the name of your organizational unit?
+  [Unknown]:
+What is the name of your organization?
+  [Unknown]:
+What is the name of your City or Locality?
+  [Unknown]:
+What is the name of your State or Province?
+  [Unknown]:
+What is the two-letter country code for this unit?
+  [Unknown]:
+Is CN=8080, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
+  [no]:  yes
+
+
+
+C:\Users\misael>keytool -certreq -alias client -file certreq.csr -keystore clientstore
+Picked up _JAVA_OPTIONS: -Xmx512M
+Enter keystore password: abc123
+
+C:\Users\misael>keytool -list -keystore clientstore
+Picked up _JAVA_OPTIONS: -Xmx512M
+Enter keystore password: abc123
+Keystore type: PKCS12
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+client, 4 abr. 2019, PrivateKeyEntry,
+Certificate fingerprint (SHA-256): 5A:8F:CF:C7:19:69:72:DC:AD:89:14:3E:2A:5B:25:95:50:3B:AA:C9:FC:30:F4:0F:31:82:EA:21:BE:A8:F6:72
+
+
+C:\Users\irina>keytool -import -alias root -trustcacerts -file intermedio.crt -keystore clientstore
+Picked up _JAVA_OPTIONS: -Xmx512M
+Enter keystore password: abc123
+
+
+//configurar servidor
+
+<Connector port="11200"
+protocol="org.apache.coyote.http11.Http11NioProtocol"
+SSLEnabled="true" maxThreads="150" scheme="https"
+secure="true" clientAuth="false" sslProtocol="TLS"
+keystoreFile="C:\Users\irina\clientstore.jks
+keystorePass="abc123" URIEncoding="UTF-8" useBodyEncodingForURI="true"
+/>
