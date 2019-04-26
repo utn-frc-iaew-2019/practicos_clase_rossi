@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<rss version="2.0">
+
+
+<channel>
+
+<title>PRODUCTOS APPLE </title>
+
+<link>http://localhost:8080/RSS/prueba.html</link>
+
+<description>Recibe las novedades de apple </description>
+
+
+<item>
+<title> productos apple </title>
+<link>https://www.apple.com/</link>
+<description> En este documento puede hallar información sobre los últimos productos de apple </description>
+</item>
+
+<item>
+<title>Iphones</title>
+<link>https://www.apple.com/iphone</link>
+<description> En este documento puede hallar información sobre los últimos Iphone </description>
+</item>
+
+<item>
+<title>MacBooks</title>
+<link>https://www.apple.com/mac//</link>
+<description> En este documento puede hallar información sobre las últimas MacBooks</description>
+
+</item>
+
+</channel>
+</rss>
